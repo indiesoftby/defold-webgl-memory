@@ -5,7 +5,7 @@ main_collection = /example/main.collectionc
 shared_state = 1
 
 [display]
-width = 960
+width = 400
 height = 640
 high_dpi = 1
 
@@ -25,7 +25,7 @@ clear_color_alpha = 1.0
 [html5]
 heap_size = 32
 cssfile = /builtins/manifests/web/dark_theme.css
-scale_mode = fit
+scale_mode = stretch
 splash_image = /example/assets/defold-white-logo.svg
 
 [input]
