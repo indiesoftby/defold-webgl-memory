@@ -1,0 +1,11 @@
+- name: webgl_memory
+  type: table
+  desc: C++ helper functions
+  members:
+
+  - name: get_info
+    type: function
+    description: Returns a table with memory info data
+    returns:
+    - name: result
+      type: table

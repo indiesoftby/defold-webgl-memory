@@ -1,0 +1,17 @@
+local table_util = require("example.table_util")
+
+function init(self)
+    self.text_node = gui.get_node("text")
+end
+
+function final(self)
+end
+
+function update(self, dt)
+    if webgl_memory then
+        local info = webgl_memory.get_info()
+        gui.set_text(self.text_node, table_util.tostring(info))
+    else
+        gui.set_text(self.text_node, "<platform is not supported>")
+    end
+end

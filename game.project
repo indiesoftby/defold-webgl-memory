@@ -1,0 +1,33 @@
+[bootstrap]
+main_collection = /example/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 960
+height = 640
+high_dpi = 1
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = ext_webgl_memory_example
+developer = Indiesoft LLC
+
+[library]
+include_dirs = webgl_memory
+
+[render]
+clear_color_alpha = 1.0
+
+[html5]
+heap_size = 32
+cssfile = /builtins/manifests/web/dark_theme.css
+scale_mode = fit
+splash_image = /example/assets/defold-white-logo.svg
+
+[input]
+game_binding = /builtins/input/all.input_bindingc
+

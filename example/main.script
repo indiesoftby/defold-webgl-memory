@@ -1,0 +1,25 @@
+function init(self)
+    msg.post(".", "acquire_input_focus")
+
+    self.wm_ui = factory.create("#webgl_memory")
+
+    if webgl_memory then
+        local info = webgl_memory.get_info()
+        print("GPU memory used in total: " .. math.floor(info.memory.total / 1024 / 1024) .. " MB")
+        print("CPU heap size: " .. math.floor(info.memory.wasmheap / 1024 / 1024) .. " MB")
+    end
+end
+
+function final(self)
+end
+
+function on_input(self, action_id, action)
+    if action_id == hash("key_space") and action.pressed then
+        if self.wm_ui then
+            go.delete(self.wm_ui)
+            self.wm_ui = nil
+        else
+            self.wm_ui = factory.create("#webgl_memory")
+        end
+    end
+end
