@@ -8,7 +8,7 @@ developer = Indiesoft LLC
 title_as_file_name = ext_webgl_memory_example
 
 [display]
-width = 960
+width = 400
 height = 640
 high_dpi = 1
 samples = 0
@@ -162,7 +162,7 @@ wasm_streaming = 0
 show_fullscreen_button = 1
 show_made_with_defold = 1
 show_console_banner = 1
-scale_mode = fit
+scale_mode = stretch
 
 [particle_fx]
 max_count = 64
