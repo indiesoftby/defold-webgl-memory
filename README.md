@@ -6,6 +6,9 @@ So, this is an adaptation into a native extension of the great [WebGL-Memory](ht
 
 As a bonus, this extension adds the size of the heap used by the game. 
 
+> [!IMPORTANT]
+> Use the extension only during game development. Exclude it in the release version of the game! It wraps WebGL calls and therefore **slows down your game**.
+
 ## Quick Start
 
 Add this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/). Open your `game.project` file and in the dependencies field under project add:
