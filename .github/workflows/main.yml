@@ -34,7 +34,7 @@ jobs:
           java -jar build/bundle/bob.jar --version
 
           # Build the project
-          java -jar build/bundle/bob.jar --email a@b.com --auth 123 --texture-compression true --bundle-output build/bundle/js-web --platform js-web --archive --variant debug resolve build bundle
+          java -jar build/bundle/bob.jar --email a@b.com --auth 123 --texture-compression true --bundle-output build/bundle/js-web --platform js-web --architectures wasm-web --archive --variant debug resolve build bundle
 
           # Move to the public directory
           mv build/bundle/js-web/* build/bundle/public
