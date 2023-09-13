@@ -7,7 +7,7 @@ So, this is an adaptation into a native extension of the excellent [WebGL-Memory
 As an extra bonus, this extension retrieves the size of the heap used by the game. 
 
 > [!IMPORTANT]
-> Use the extension only during game development. Exclude it in the release version of the game! It wraps WebGL calls and therefore **slows down your game**.
+> Use the extension only during game development. **Remove it as a dependency** in the release version of the game! It wraps WebGL calls and therefore **slows down your game**.
 
 Check out the [online demo](https://indiesoftby.github.io/defold-webgl-memory/) to see how it works.
 
