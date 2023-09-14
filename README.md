@@ -1,3 +1,5 @@
+[![WebGL memory tracker cover](cover.jpg)](https://github.com/indiesoftby/defold-webgl-memory)
+
 # WebGL memory tracker for Defold
 
 A quick and easy way to find out the GPU and CPU memory usage of your Defold game on HTML5 platform.
