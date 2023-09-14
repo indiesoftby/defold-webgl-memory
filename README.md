@@ -62,7 +62,7 @@ In HTML5 your main task is to minimise the memory consumption of the game. First
 
 - **Minimise the required heap size.** Set the `game.project` heap size to 32 megabytes (minimum). Run the HTML5 build of your game and check the value of `webgl_memory.get_info().memory.wasmheap`. If it is greater than 32 megabytes, increase this parameter and run the game again.
 - **Use texture compression**: 16bpp or UASTC if their output image quality is OK to you. They will significantly reduce the size of the consumed video memory and speed up the performance of your game.
-- **Use 2k atlases** instead of 4k/8k atlases. They reduce required heap size. Uncompressed RGBA 4k atlas with mipmaps uses 85x2 (190) megabytes of heap just to transfer it to the video adapter memory.
+- **Use 2k atlases** instead of 4k/8k atlases to reduce required heap size. Uncompressed RGBA 4k atlas with mipmaps uses 85x2 (190) megabytes of heap just to transfer it to the video adapter memory.
 
 ## Credits
 
