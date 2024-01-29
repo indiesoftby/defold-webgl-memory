@@ -35,6 +35,12 @@ When you call `webgl_memory.get_info()`, the result is:
 
 ```lua
 {
+  context = {
+    vendor = <string>,
+    renderer = <string>,
+    unmasked_vendor = <string>,
+    unmasked_renderer = <string>,
+  },
   memory = {
     buffer = <bytes used by buffers>,
     texture = <bytes used by textures>,

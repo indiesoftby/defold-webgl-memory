@@ -8,16 +8,26 @@ var LibraryWebGLMemory = {
             return cstr;
         },
 
-        addHeapSize: function (obj) {
+        addExtraInfo: function (obj) {
             obj.memory.wasmheap = Module.HEAP8.length;
+            var gl = Module.ctx;
+            obj.context = {
+                vendor: gl.getParameter(gl.VENDOR),
+                renderer: gl.getParameter(gl.RENDERER)
+            };
+            var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+            if (debugInfo) {
+                obj.context.unmasked_vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+                obj.context.unmasked_renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+            }
             return obj;
         }
     },
 
-    WebGLMemory_GetInfo: function (param, subparam) {
+    WebGLMemory_GetInfo: function () {
         var ext = Module.ctx.getExtension("GMAN_webgl_memory");
         if (ext) {
-            return WebGLMemory.cstringify(WebGLMemory.addHeapSize(ext.getMemoryInfo()));
+            return WebGLMemory.cstringify(WebGLMemory.addExtraInfo(ext.getMemoryInfo()));
         } else {
             if (!WebGLMemory.warnShown) {
                 WebGLMemory.warnShown = true;
@@ -25,7 +35,7 @@ var LibraryWebGLMemory = {
                     "Unable to get the `GMAN_webgl_memory` extension - webgl-memory.js hasn't been loaded yet?"
                 );
             }
-            return WebGLMemory.cstringify(WebGLMemory.addHeapSize({
+            return WebGLMemory.cstringify(WebGLMemory.addExtraInfo({
                 memory: {
                     buffer: 0,
                     texture: 0,
