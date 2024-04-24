@@ -1,7 +1,7 @@
 script: "/example/webgl_memory.gui_script"
 fonts {
-  name: "system_font"
-  font: "/builtins/fonts/system_font.font"
+  name: "default"
+  font: "/builtins/fonts/default.font"
 }
 background_color {
   x: 0.0
@@ -43,7 +43,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "<text>"
-  font: "system_font"
+  font: "default"
   id: "text"
   xanchor: XANCHOR_LEFT
   yanchor: YANCHOR_BOTTOM

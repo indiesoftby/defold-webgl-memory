@@ -4,7 +4,7 @@ var LibraryWebGLMemory = {
 
         cstringify: function (obj) {
             var str = JSON.stringify(obj);
-            var cstr = allocate(intArrayFromString(str), "i8", ALLOC_NORMAL);
+            var cstr = stringToNewUTF8(str);
             return cstr;
         },
 
